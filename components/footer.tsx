@@ -111,7 +111,6 @@ const Footer = () => {
             <button
               aria-label="Instagram"
               className="text-gray-500 hover:text-pink-600"
-              onClick={() => {}}
             >
               <RiInstagramFill className="h-6 w-6" />
             </button>

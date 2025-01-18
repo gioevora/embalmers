@@ -1,4 +1,4 @@
-"use client";
+'use client'
 import {
   Navbar as HeroUINavbar,
   NavbarContent,
@@ -15,7 +15,7 @@ import { usePathname } from "next/navigation"; // For detecting the active link 
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
-import { Logo } from "@/components/icons";
+
 
 export const Navbar = () => {
   const pathname = usePathname(); // App Router hook to determine the active link
@@ -25,7 +25,6 @@ export const Navbar = () => {
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
-            <Logo />
             <p className="font-bold text-inherit">EMBALMERS</p>
           </NextLink>
         </NavbarBrand>
