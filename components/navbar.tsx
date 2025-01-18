@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import {
   Navbar as HeroUINavbar,
   NavbarContent,
@@ -20,7 +20,6 @@ import { Logo } from "@/components/icons";
 export const Navbar = () => {
   const pathname = usePathname(); // App Router hook to determine the active link
 
-
   return (
     <HeroUINavbar maxWidth="xl" position="sticky">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
@@ -36,7 +35,7 @@ export const Navbar = () => {
               <NextLink
                 className={clsx(
                   "text-inherit",
-                  pathname === item.href ? "text-primary font-medium" : ""
+                  pathname === item.href ? "text-primary font-medium" : "",
                 )}
                 href={item.href}
               >
@@ -47,7 +46,10 @@ export const Navbar = () => {
         </ul>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex basis-1/5 sm:basis-full" justify="end">
+      <NavbarContent
+        className="hidden sm:flex basis-1/5 sm:basis-full"
+        justify="end"
+      >
         <NavbarItem className="hidden sm:flex gap-2">
           <ThemeSwitch />
         </NavbarItem>
@@ -59,20 +61,15 @@ export const Navbar = () => {
       </NavbarContent>
 
       <NavbarMenu>
-    
-          <div className="mx-4 mt-2 flex flex-col gap-2">
-            {siteConfig.navMenuItems.map((item, index) => (
-              <NavbarMenuItem key={`${item.label}-${index}`}>
-                <Link
-                  href={item.href}
-                  size="lg"
-                >
-                  {item.label}
-                </Link>
-              </NavbarMenuItem>
-            ))}
-          </div>
-      
+        <div className="mx-4 mt-2 flex flex-col gap-2">
+          {siteConfig.navMenuItems.map((item, index) => (
+            <NavbarMenuItem key={`${item.label}-${index}`}>
+              <Link href={item.href} size="lg">
+                {item.label}
+              </Link>
+            </NavbarMenuItem>
+          ))}
+        </div>
       </NavbarMenu>
     </HeroUINavbar>
   );

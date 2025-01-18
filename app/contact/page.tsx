@@ -1,7 +1,6 @@
-'use client'
-import { title } from '@/components/primitives';
-import { Button, Card, CardBody, Input, Link, Textarea } from '@heroui/react';
-import React from 'react';
+"use client";
+import { Button, Card, CardBody, Input, Link, Textarea } from "@heroui/react";
+import React from "react";
 import {
   FaFacebookF,
   FaFacebookMessenger,
@@ -12,6 +11,8 @@ import {
 } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 
+import { title } from "@/components/primitives";
+
 const ContactSection = () => {
   return (
     <div className="w-full">
@@ -19,11 +20,11 @@ const ContactSection = () => {
 
       {/* Contact Section Description */}
       <p className="text-lg text-gray-700 mb-8 ">
-        We would love to hear from you! Please fill out the form below and we will get back to you as soon as possible.
+        We would love to hear from you! Please fill out the form below and we
+        will get back to you as soon as possible.
       </p>
 
       <div className="w-full grid grid-cols-3 justify-between gap-8 py-8">
-
         {/* Google Map Section */}
         <div className="col-span-3 order-2 md:order-1 md:col-span-2 max-w-full">
           <Card className="relative overflow-visible w-full">
@@ -51,7 +52,10 @@ const ContactSection = () => {
                     <div>
                       <p className="text-default-500">Phone</p>
                       <p className="font-bold">
-                        <Link className="text-md md:text-lg" href="tel:09651983796">
+                        <Link
+                          className="text-md md:text-lg"
+                          href="tel:09651983796"
+                        >
                           09xxxxx
                         </Link>
                       </p>
@@ -74,7 +78,7 @@ const ContactSection = () => {
                           className="text-md md:text-lg"
                           href="mailto:abic.gabmercado@gmail.com"
                         >
-                         embalmersunmasked@gmail.com
+                          embalmersunmasked@gmail.com
                         </Link>
                       </p>
                     </div>
@@ -83,10 +87,6 @@ const ContactSection = () => {
               </Card>
             </div>
           </Card>
-
-
-
-
 
           <div className="py-12">
             <h1 className="font-bold">Reach out us on:</h1>
@@ -121,16 +121,21 @@ const ContactSection = () => {
               <div className="flex flex-col gap-4">
                 <Input label="Full Name" type="text" />
                 <Input label="Email" type="email" />
-                <Textarea className="max-w-full" label="Description" placeholder="Enter your description" />
+                <Textarea
+                  className="max-w-full"
+                  label="Description"
+                  placeholder="Enter your description"
+                />
 
                 {/* Submit Button */}
-                <Button className='w-full' color='primary'>
+                <Button className="w-full" color="primary">
                   Submit
                 </Button>
 
                 {/* Note about Submission */}
                 <p className="text-sm text-gray-500 mt-2">
-                  Note: Your information will be submitted securely. We will get back to you as soon as possible.
+                  Note: Your information will be submitted securely. We will get
+                  back to you as soon as possible.
                 </p>
               </div>
             </CardBody>
@@ -139,6 +144,6 @@ const ContactSection = () => {
       </div>
     </div>
   );
-}
+};
 
 export default ContactSection;
